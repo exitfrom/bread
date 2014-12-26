@@ -1,80 +1,156 @@
 <!DOCTYPE html>
-<html>
+<!--
+Created using JS Bin
+http://jsbin.com
 
+Copyright (c) 2014 by anonymous (http://jsbin.com/tozowimawa/1/edit)
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Bread : you can chooes your favior bread with your mood">
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html ng-app>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <meta charset="utf-8">
+  <title>心情麵包版型</title>
+<style id="jsbin-css">
+html {
+    background-image:url(http://petitchefpapa.com/site_images/food/13-white-bread-soup-base/13-white-bread-soup-base-step10.jpg);
+    background-size: 50px 50px;
+      
+}
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+.Rectangle{ 
+	width: 200px;
+    margin-left: -100px;
+    height: 50px;   
+    border: 2.5px solid black;    
+}
 
-    <title>Bread</title>
-  </head>
+.freedom {
+  background-color: rgba(255,255,255,0.4);
+  
+}
 
-  <body>
+.freedom > h1 {
+  margin-top:140px;
+  text-align:center;
+  height: 50px;
+  border: 0.18em solid chocolate;
+  color:
+}
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/exitfrom/bread">View on GitHub</a>
+.small > h1 {
+  font-size:12px;
+}
 
-          <h1 id="project_title">Bread</h1>
-          <h2 id="project_tagline">you can chooes your favior bread with your mood</h2>
+.small #center {
+  position: absolute;
+  top:50px;
+  left:100px;
+  
+}
+.freedom #center {
+  position: absolute;
+	width: 400px;
+	height: 25px;
+  top: 50%;
+  left: 50%; 
+}
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/exitfrom/bread/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/exitfrom/bread/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+.magnifying-glass
+{
+ font-size: 5em; /* This controls the size. */
+ display: inline-block;
+ width: 0.2em;
+ height: 0.2em;
+ border: 0.1em solid dodgerblue;
+ position: relative;
+ border-radius: 0.35em;
+}
+.magnifying-glass::before
+{
+ content: "";
+ display: inline-block;
+ position: absolute;
+ right: -0.25em;
+ bottom: -0.1em;
+ border-width: 0;
+ background:dodgerblue;
+ width: 0.25em;
+ height: 0.08em;
+ -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+}
+#lier{
+   position: absolute;
+	width: 80px;
+	height: 25px;
+  margin-left: 410px;
+}
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+#bread {
+  position:absolute;
+  top:50%;
+  left:50%;
+}
+</style>
+</head>
+<body>         
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+  <select id = "lier">
+    <option>誠實</option>
+    <option>不誠實</option>
+  </select>
+  <select id = "mood">
+    <option>困惑</option>
+    <option>生氣</option>
+     <option>開心</option>
+     <option>難過</option>
+     <option>失望</option>
+     <option>無聊</option>
+    <option>忌妒</option>
+    <option>悠閒</option>
+    <option>情傷</option>
+  </select>
+  
+  <div ng-class = "{freedom: !key, small:key}">
+    <h1>用心情搜尋麵包～</h1>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Bread maintained by <a href="https://github.com/exitfrom">exitfrom</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+      <div id = "center">
+        <input type = "search" class = "Rectangle"
+               ng-model ="key"/>
+          <div id = 'magnifying-glass' class =  "magnifying-glass"></div>
+      </div>
     
+  </div>
+  
+  
+  
+  <div id ="bread" ng-show = "key">
+ 
+    fat guys can't eat bread!!
+    
+  </div>
+  
 
-  </body>
+  
+
+
+  <div id = "facebook-icon"
+       </div>
+<script id="jsbin-javascript">
+
+
+breads = [
+  
+  {name:'', img:'', mood: ''},
+  {},
+  {}
+  
+];
+</script>
+</body>
 </html>
