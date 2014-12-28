@@ -8,7 +8,7 @@ Copyright (c) 2014 by anonymous (http://jsbin.com/tozowimawa/1/edit)
 Released under the MIT license: http://jsbin.mit-license.org
 -->
 <meta name="robots" content="noindex">
-<html ng-app>
+<html ng-app = "breadApp">
 <head>
 <script src="./bower_components/angular/angular.min.js"></script>
   <meta charset="utf-8">
@@ -24,7 +24,8 @@ Released under the MIT license: http://jsbin.mit-license.org
   <![endif]-->
 
 </head>
-<body>         
+
+<body ng-controller = "myCtrl">         
 
   <select id = "lier">
     <option>誠實</option>
@@ -62,7 +63,6 @@ Released under the MIT license: http://jsbin.mit-license.org
   </div>
   
 
-
   <div id = "facebook-icon">
   </div>
 
@@ -70,17 +70,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 
 <!-- 請抽出它 -->
   
-<script id="jsbin-javascript">
-
-
-breads = [
-  
-  {name:'', img:'', mood: ''},
-  {},
-  {}
-  
-];
-</script>
+<script src = "./index.js"></script>
 
 </body>
 
