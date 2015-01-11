@@ -11,7 +11,7 @@ html::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(http://petitchefpapa.com/site_images/food/13-white-bread-soup-base/13-white-bread-soup-base-step10.jpg);
+  background-image: url(../images/2600.jpg);
   background-size: 50px 50px;
   opacity: 0.42;
   z-index: -1;
@@ -109,13 +109,24 @@ select {
 /* line 102, ../sass/screen.scss */
 #bread {
   position: absolute;
-  top: 30%;
+  -moz-box-shadow: 0px 0px 3px 3px brown;
+  -webkit-box-shadow: 0px 0px 3px 3px brown;
+  box-shadow: 0px 0px 3px 3px brown;
+  top: 15%;
   left: 10%;
   background-color: rgba(217, 159, 140, 0.86);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
   width: 80%;
   max-width: 420px;
   height: 66%;
   padding: 25px;
-  font-size: 36px;
+  font-size: 18px;
   color: white;
+}
+/* line 118, ../sass/screen.scss */
+#bread .bread-img {
+  width: 75%;
 }

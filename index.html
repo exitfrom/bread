@@ -27,16 +27,18 @@ Released under the MIT license: http://jsbin.mit-license.org
 
 <body ng-controller = "myCtrl">         
 
+ <!-- 功能未架的部份，先用註解的方式藏起來
   <select id = "lier">
     <option>誠實</option>
     <option>不誠實</option>
-  </select>
+  </select> -->
+
   <select id = "mood" ng-model = "key" ng-options = "m as m for m in  moods">
     <option value="">-- 請選擇 --</option>
   </select>
   
   <div ng-class = "{freedom: !key, small:key}">
-    <h1>用心情搜尋麵包～</h1>
+    <h1 ng-hide = "key">用心情搜尋麵包～</h1>
 
       <div id = "center">
         <input type = "search" class = "Rectangle"
@@ -47,10 +49,14 @@ Released under the MIT license: http://jsbin.mit-license.org
   </div>
   
   
-  
-  <div id ="bread" ng-show = "key">
- 
-    fat guys can't eat bread!!
+  <div id ="bread" ng-show = "key"
+      ng-style = "
+        {'background-image': 
+            'url(' + getBread().img + ')'}">
+
+    <h2>{{getBread().name}}</h2>
+    <p>{{getBread().text || 'fat guys can\'t eat bread!!'}}</p> 
+    
     
   </div>
   
