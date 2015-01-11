@@ -31,16 +31,8 @@ Released under the MIT license: http://jsbin.mit-license.org
     <option>誠實</option>
     <option>不誠實</option>
   </select>
-  <select id = "mood">
-    <option>困惑</option>
-    <option>生氣</option>
-     <option>開心</option>
-     <option>難過</option>
-     <option>失望</option>
-     <option>無聊</option>
-    <option>忌妒</option>
-    <option>悠閒</option>
-    <option>情傷</option>
+  <select id = "mood" ng-model = "key" ng-options = "m as m for m in  moods">
+    <option value="">-- 請選擇 --</option>
   </select>
   
   <div ng-class = "{freedom: !key, small:key}">
