@@ -25,10 +25,12 @@ function myCtrl ($scope) {
       {name:'二包', img:'./images/2600.jpg',
       	 mood: '開心'},
       
-      {name:'三包', img:'./images/2603.jpg'},
+      {name:'三包', img:'./images/2603.jpg',
+        mood: '開心'},
       
 
-      {name:'四包', img:'./images/2527.jpg'},
+      {name:'起司麵包', img:'./images/2527.jpg'},
+      mood: '悠閒'
 
       /* 請修改名字，並加入心情 */
 
